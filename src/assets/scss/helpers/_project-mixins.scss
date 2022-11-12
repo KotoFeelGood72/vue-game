@@ -1,0 +1,86 @@
+
+// Сброс стилей input
+@mixin app {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  background-color: transparent;
+  font-family: $font_1;
+  font-size: $font_size_base;
+}
+
+// Input end
+
+
+// Flex styles
+
+@mixin flex-center {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-col {
+  flex-direction: column;
+}
+
+@mixin flex-start {
+  justify-content: flex-start;
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-space {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-end {
+  justify-content: flex-end;
+  display: flex;
+  align-items: center;
+}
+
+// End flex styles
+
+// Style default btn
+
+@mixin button {
+  position: relative;
+  filter: drop-shadow(0 .4rem .5rem rgba(0, 0, 0, 0.15));
+  transition: all .3s ease;
+  button, a {
+    @include app;
+    background-color: $yellow;
+    color: $dark;
+    font-size: 2.2rem;
+    font-family: $font_3;
+    text-transform: uppercase;
+    padding: 2.5rem 3.3rem 2.2rem 3.3rem;
+    border-radius: 2rem;
+    line-height: 3rem;
+    position: relative;
+    overflow: hidden;
+    @include bp($point_2) {
+      padding: 1.2rem 3rem;
+      font-size: 1.6rem;
+      border-radius: 1rem;
+    }
+
+    &.vio {
+      background-color: $vio;
+      color: $white;
+      padding: 1.7rem 2.4rem 1.4rem 2.4rem;
+    }
+    &.yellow {
+      background-color: $yellow;
+      color: $dark;
+      padding: 1.7rem 2.4rem 1.4rem 2.4rem;
+    }
+  }
+  &:hover {
+    opacity: .8;
+  }
+}

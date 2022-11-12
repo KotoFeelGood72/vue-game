@@ -1,30 +1,22 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <layout-main>
+    <router-view/>
+  </layout-main>
 </template>
 
+
+
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
 
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
+  //.section_in {
+  //  max-width: $page_width;
+  //  margin: 0 auto;
+  //  width: 100%;
+  //}
 </style>
+<script>
+import LayoutMain from "@/components/layout/LayoutMain";
+export default {
+  components: {LayoutMain}
+}
+</script>
